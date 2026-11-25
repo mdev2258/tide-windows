@@ -1,0 +1,47 @@
+# Copy to config.toml (git-ignored) and fill in.
+
+[location]
+name = "Emsworth"
+latitude = 50.845
+longitude = -0.938
+# Find yours with:  tidewindow stations emsworth
+station_id = "CHANGE_ME"
+
+[admiralty]
+# Free "Discovery" tier key from https://admiraltyapi.portal.azure-api.net
+# Or leave blank and set ADMIRALTY_API_KEY in your environment.
+api_key = ""
+
+[session]
+start = "09:00"          # local time, earliest launch
+end = "18:00"            # local time, must be ashore by
+min_height_m = 3.0       # GUESS - calibrate from experience at the slipway
+min_duration_min = 60    # ignore windows shorter than this
+daylight_only = true     # clamp to sunrise / sunset
+sunset_margin_min = 30   # be ashore this long before sunset
+
+# Wind limits in knots. Tune to taste / the group you're teaching.
+[boats.topper]
+min_wind = 5
+max_wind = 16
+max_gust = 20
+
+[boats.pico]
+min_wind = 4
+max_wind = 14
+max_gust = 18
+
+[boats.feva]
+min_wind = 5
+max_wind = 16
+max_gust = 20
+
+[boats.ilca6]
+min_wind = 6
+max_wind = 20
+max_gust = 25
+
+[boats.oppie]
+min_wind = 3
+max_wind = 12
+max_gust = 16
